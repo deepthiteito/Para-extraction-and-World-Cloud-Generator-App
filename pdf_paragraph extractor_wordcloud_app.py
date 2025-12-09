@@ -74,7 +74,7 @@ if uploaded_file and keywords_input.strip():
     clean = re.sub(r"\s+", " ", clean)
 
     # Tokenize
-    tokens = word_tokenize(clean)
+    tokens = word_tokenize(clean, preserve_line=True)
 
     # Remove stopwords
     stop_words = set(stopwords.words("english"))
